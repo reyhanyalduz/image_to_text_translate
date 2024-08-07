@@ -1,16 +1,16 @@
 # image_to_text_translate
 
-A new Flutter project.
+Take a picture from your camera or add it from gallery.
+Google MLKit takes the image and detects all texts.
+Translate package will translate it.
+It translates English to Turkish but you can change it in translation.dart file
 
-## Getting Started
+Future<Translation> cevir() {
+    Future<Translation> ceviri =
+        translator.translate(scannedText, from: 'en', to: 'tr');
+    return ceviri;
+  }
 
-This project is a starting point for a Flutter application.
+Here in this code, you just need to change "en" and "tr" keywords with the language you like.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
